@@ -2,13 +2,13 @@
 
 # dependencies
 /node_modules
+/api/node_modules
+/client/node_modules
 /.pnp
 .pnp.js
 
 # testing
 /coverage
-/nft_processing/minter
-/nft_processing/node_modules
 
 # production
 /build
