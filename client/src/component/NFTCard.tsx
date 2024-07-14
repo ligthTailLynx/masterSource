@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Button, Tabs, Tab } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import CSS from "csstype";
 
-const NFTCard: React.FC<{ type: string }> = ({ type }) => {
+const NFTCard: React.FC<{}> = ({}) => {
   const [component, setComponent] = useState(<></>);
   const [jsonContent, setJsonContent] = useState(Object({}));
 
@@ -21,12 +21,18 @@ const NFTCard: React.FC<{ type: string }> = ({ type }) => {
   //    });
   //};
 
+  //<Card.Img variant="top" src="holder.js/100px180" />
   return (
-    <>
-      {component || (
-        <div className="placeholder-styles">YOUR NICE PLACEHOLDER</div>
-      )}
-    </>
+    <Card style={{ width: "18rem" }}>
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
   );
 };
 
