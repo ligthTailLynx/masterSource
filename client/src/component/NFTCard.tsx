@@ -6,7 +6,37 @@ const NFTCard: React.FC<{}> = ({}) => {
   const [component, setComponent] = useState(<></>);
   const [jsonContent, setJsonContent] = useState(Object({}));
 
-  useEffect(() => {}, []);
+  const handleButtonSmash = () => {
+    console.log("smackThat");
+  };
+
+  const style: CSS.Properties = {
+    width: "18rem",
+    margin: "15px",
+  };
+
+  useEffect(() => {
+    setComponent(
+      <Card style={style}>
+        <Card.Body>
+          <Card.Title style={{ color: "#282c34" }}>Card Title</Card.Title>
+          <Card.Text style={{ color: "#282c34" }}>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+          <Button
+            style={{ margin: "15px" }}
+            variant="primary"
+            onClick={() => {
+              handleButtonSmash();
+            }}
+          >
+            Push SQL Changes
+          </Button>
+        </Card.Body>
+      </Card>
+    );
+  }, []);
 
   //const getJSONData = () => {
   //  return fetch("http://localhost:9000/jsonData")
@@ -23,16 +53,11 @@ const NFTCard: React.FC<{}> = ({}) => {
 
   //<Card.Img variant="top" src="holder.js/100px180" />
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <>
+      {component || (
+        <div className="placeholder-styles">YOUR NICE PLACEHOLDER</div>
+      )}
+    </>
   );
 };
 
