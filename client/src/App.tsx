@@ -66,7 +66,7 @@ function App() {
           <Tab.Content>
             <Tab.Pane eventKey={"solana"}> content solana</Tab.Pane>
             <Tab.Pane eventKey={"ether"}> content ether</Tab.Pane>
-            <Tab.Pane eventKey={"ether"}>
+            <Tab.Pane eventKey={"configg"}>
               {<FileManager type="json" />}
             </Tab.Pane>
           </Tab.Content>

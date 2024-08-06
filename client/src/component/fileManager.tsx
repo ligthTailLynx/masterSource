@@ -58,15 +58,19 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
   }, [jsonContent, type]);
 
   const getJSONData = () => {
-    return fetch("http://localhost:9000/jsonData")
+    console.log("fetch me some json");
+    return fetch("http://localhost:9001/jsonData")
       .then((res) => {
+        console.log(res);
         return res.json();
       })
       .then((val) => {
         return val;
       })
       .catch((error) => {
+        console.log("GetJSONData got out of hand");
         console.log(error);
+        return {};
       });
   };
 
