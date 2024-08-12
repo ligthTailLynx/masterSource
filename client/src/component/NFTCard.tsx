@@ -31,7 +31,7 @@ const NFTCard: React.FC<{}> = ({}) => {
               handleButtonSmash();
             }}
           >
-            Push SQL Changes
+            Push Button
           </Button>
         </Card.Body>
       </Card>

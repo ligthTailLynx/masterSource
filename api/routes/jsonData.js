@@ -5,9 +5,7 @@ const router = express.Router();
 const { readFileSync, writeFile } = require("node:fs");
 
 router.get("/", function (req, res, next) {
-  console.log("i try to get json");
   const data = readFileSync("./data/data.json");
-  console.log(data);
   var jsonObj = JSON.parse(data);
   res.json(jsonObj);
 });

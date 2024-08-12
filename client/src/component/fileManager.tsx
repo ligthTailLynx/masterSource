@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Tabs, Tab } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import CSS from "csstype";
 
 import JsonGroup from "./JSONGroup";
@@ -12,6 +12,7 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
     switch (type) {
       case "json":
         getJSONData().then((val) => {
+          console.log(val);
           setJsonContent(val);
         });
         break;
@@ -21,6 +22,7 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
   useEffect(() => {
     const style: CSS.Properties = {
       margin: "15px",
+      justifyContent: "left",
     };
     switch (type) {
       case "json":
@@ -29,11 +31,12 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
             <Button
               style={style}
               variant="primary"
+              size="sm"
               onClick={() => {
                 postJSONData(jsonContent);
               }}
             >
-              Push JSON Changes
+              Push new Config
             </Button>
             {Object.keys(jsonContent).map((kid, index) => {
               return (
@@ -58,10 +61,8 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
   }, [jsonContent, type]);
 
   const getJSONData = () => {
-    console.log("fetch me some json");
-    return fetch("http://localhost:9001/jsonData")
+    return fetch("http://192.168.0.126:9001/jsonData")
       .then((res) => {
-        console.log(res);
         return res.json();
       })
       .then((val) => {
@@ -76,7 +77,7 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
 
   const postJSONData = (jsonObj: object) => {
     console.log(jsonObj);
-    fetch("http://localhost:9001/jsonData", {
+    fetch("http://192.168.0.126:9001/jsonData", {
       method: "POST",
       headers: {
         Accept: "application/json",
