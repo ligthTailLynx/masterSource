@@ -9,6 +9,10 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
 var jsonDataRouter = require("./routes/jsonData");
+var solDataRouter = require("./routes/solData");
+var etherDataRouter = require("./routes/etherData");
+var solMintRouter = require("./routes/solMintNFT");
+var ethMintRouter = require("./routes/ethMintNFT");
 
 var app = express();
 
@@ -28,6 +32,10 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 app.use("/jsonData", jsonDataRouter);
+app.use("/solData", solDataRouter);
+app.use("/etherData", etherDataRouter);
+app.use("/solMintNFT", solMintRouter);
+app.use("/ethMintNFT", ethMintRouter);
 
 app.listen(9001);
 

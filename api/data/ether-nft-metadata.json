@@ -1,0 +1,19 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Attribute1",
+      "value": "value1"
+    },
+    {
+      "trait_type": "Attribute2",
+      "value": "500"
+    },
+    {
+      "trait_type": "Attribute3",
+      "value": "foo"
+    }
+  ],
+  "description": "nft collection as a poc for masterthesis",
+  "image": "https://ipfs.filebase.io/ipfs/QmT1e1y1r32VRiGyp2fVq2rRF6VRrNvMXVa5gofxVHwkcg",
+  "name": "not a fungus"
+}

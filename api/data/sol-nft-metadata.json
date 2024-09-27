@@ -1,0 +1,23 @@
+{
+  "name": "nft_name",
+  "description": "nft_description",
+  "image": "https://ipfs.filebase.io/ipfs/QmZAtxja9BMwKugwZxs9R44BxEGS5eeUVE55hGt71YExmj",
+  "attributes": [
+    {
+      "trait_type": "eigenschaft1",
+      "value": "foo"
+    },
+    {
+      "trait_type": "eigenschaft2",
+      "value": "bar"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "types": "img_type",
+        "uri": "https://ipfs.filebase.io/ipfs/QmZAtxja9BMwKugwZxs9R44BxEGS5eeUVE55hGt71YExmj"
+      }
+    ]
+  }
+}

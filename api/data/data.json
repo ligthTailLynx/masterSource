@@ -1,10 +1,1 @@
-{
-    "solana": {
-            "wallet": "",
-            "private":""
-        },
-    "ether":{
-        "wallet": "",
-        "private":""
-    }
-}
+{"solana":[{"wallet":"7o2NCRPnUA86USogHLDhr9n7VraZceXykeZdk6E7qCoz","private":"2RTrmW6sp2CjuxTF71qqBmwgyUixMb3SbbJwc55CpRSmjNxM8qbcJCT5FJsugikyBtuf4fGCd2tZaXjnhsGLpPLc","network":"devnet","name":"fromWalletA"},{"wallet":"3AkyDCzTTuNp3YpFVfBJ5ombtV1EvnHjNVGn7kjCw3yV","private":"YC2tAA6W5EBph4LhEAwKp9swxxA8Ka8wPqq7zUreevTGpNfsD5DgvL6Zro3hFtPFDPmLGZv1RsVcGh3zAjpZ2Pd","network":"devnet","name":"toWalletB"}],"ether":[{"wallet":"0x6791572B26137FBc9fD9C6F821219BC939d93ACA","private":"0x80b440fb42a0709cd1d8dea0603554888dcd4fd028f2f0432c495a9b8ee625c2","network":"sepolia","name":"fromWalletA"},{"wallet":"0xAB4EB3796A1943403A7C5ab6EF5946D791Fd1E9D","private":"0x221bfec5e440cfe73e3d2c9fe3c5149db2fa2fcefd720de1a8b4bc31f0d0bda8","network":"sepolia","name":"toWalletB"}],"thirdweb":{"secreteKey":"r3OLIGAMlUHezH-1T1ROmWForvJfhKLdl7m-BfU-ncEbsBiwMfB4B51n06mEZY9ZufqfnQ0z61_l5hkXVUvGsQ"}}

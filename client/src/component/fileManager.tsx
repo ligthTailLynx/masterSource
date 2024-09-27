@@ -4,7 +4,10 @@ import CSS from "csstype";
 
 import JsonGroup from "./JSONGroup";
 
-const FileManager: React.FC<{ type: string }> = ({ type }) => {
+const FileManager: React.FC<{ type: string; file: string }> = ({
+  type,
+  file,
+}) => {
   const [component, setComponent] = useState(<></>);
   const [jsonContent, setJsonContent] = useState(Object({}));
 
@@ -17,7 +20,7 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
         });
         break;
     }
-  }, [type]);
+  }, [type, file]);
 
   useEffect(() => {
     const style: CSS.Properties = {
@@ -61,7 +64,7 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
   }, [jsonContent, type]);
 
   const getJSONData = () => {
-    return fetch("http://192.168.0.126:9001/jsonData")
+    return fetch("http://192.168.0.126:9001/" + file)
       .then((res) => {
         return res.json();
       })
@@ -77,7 +80,7 @@ const FileManager: React.FC<{ type: string }> = ({ type }) => {
 
   const postJSONData = (jsonObj: object) => {
     console.log(jsonObj);
-    fetch("http://192.168.0.126:9001/jsonData", {
+    fetch("http://192.168.0.126:9001/" + file, {
       method: "POST",
       headers: {
         Accept: "application/json",
